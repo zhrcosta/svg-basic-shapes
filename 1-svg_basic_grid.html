@@ -35,6 +35,16 @@
                 stroke-width: .8;
             }
 
+            #line-x-axis{
+                stroke: red;
+                stroke-width: .5;
+                opacity: 0.5;
+            }
+            #line-y-axis{
+                stroke: green;
+                stroke-width: .5;
+                opacity: 0.5;
+            }
         </style>
     </head>
     <body>
@@ -48,11 +58,15 @@
                     <path d="m20,0 v100"/>
                     <path d="m30,0 v100"/>
                     <path d="m40,0 v100"/>
-                    <path d="m50,0 v100"/>
                     <path d="m60,0 v100"/>
                     <path d="m70,0 v100"/>
                     <path d="m80,0 v100"/>
                     <path d="m90,0 v100"/>
+                </g>
+                
+                <g id="middle_lines">
+                    <path id="line-x-axis" d="m0,50 h100"/>
+                    <path id="line-y-axis" d="m50,0 v100"/>
                 </g>
 
                 <g id="horizontal_lines">
@@ -60,7 +74,6 @@
                     <path d="m0,20 h100"/>
                     <path d="m0,30 h100"/>
                     <path d="m0,40 h100"/>
-                    <path d="m0,50 h100"/>
                     <path d="m0,60 h100"/>
                     <path d="m0,70 h100"/>
                     <path d="m0,80 h100"/>
