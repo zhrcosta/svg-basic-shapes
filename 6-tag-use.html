@@ -52,6 +52,26 @@
             fill: transparent;
             stroke-linejoin: round;
         }
+        #cp-tag2{
+            transform: rotate(90deg);
+            transform-origin: 60% 50%;
+        }
+        #cp-tag3{
+            transform: rotate(180deg);
+            transform-origin: 50% 60%;
+        }
+        #cp-tag4{
+            transform: rotate(270deg);
+            transform-origin: 40% 50%;
+        }
+        #tag{
+            d:path("m50,40 l10,-10 v-20 h-20 v20z");
+            transition: 500ms;
+        }
+        svg:hover #tag{
+            d: path("m50,50 l10,-10 v-20 h-20 v20z");
+            transition: 500ms;
+        }
     </style>
 </head>
 <body>
@@ -91,7 +111,13 @@
         </g>
 
         <g id="shapes">
-            <path class="pen" d="m50,40 l10,-10 v-20 h-20 v20z"/>
+            <path class="pen" id="tag" d="m50,40 l10,-10 v-20 h-20 v20z"/>
+        </g>
+
+        <g id="instances">
+            <use xlink:href="#tag" id="cp-tag2" x="10" y="10"/>
+            <use xlink:href="#tag" id="cp-tag3" x="0" y="20"/>
+            <use xlink:href="#tag" id="cp-tag4" x="-10" y="10"/>
         </g>
     </svg>
 
